@@ -55,21 +55,30 @@ isOk = new Boolean(false);
 ##### number
 
 ```ts
-let decimal: number = 10;
 // 10진수
-let hex: number = 0xf00d;
+let decimal: number = 10;
 //  16진수
-let binary: number = 0b1010;
+let hex: number = 0xf00d;
 // 2진수
-let octal: number = 0o744;
+let binary: number = 0b1010;
 // 8진수
-let notANumber: number = NaN;
+let octal: number = 0o744;
 // NaN
-let underscoreNum: number = 1_000_000;
+let notANumber: number = NaN;
 // _포함 숫자
+let underscoreNum: number = 1_000_000;
 ```
 
 ##### string
+
+```ts
+// 기본적인 스트링
+let myName: string = "name";
+
+// 템플릿 문자열 - 백틱 기호도 사용할 수 있다.
+let age: number = 7;
+let templateString: string = `my name is ${myName} and age id ${age}`;
+```
 
 ##### symbol
 
