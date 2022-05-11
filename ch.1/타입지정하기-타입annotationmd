@@ -22,7 +22,7 @@ userName = 39;
 let a;
 // a에 커서를 올려보면 type에 any가 할당되어 있다.
 
-let b: Number;
+let b: number;
 // 타입을 선언해 줄 수 있다.
 ```
 
