@@ -122,3 +122,27 @@ let strVal: string | undefined = undefined;
 console.log(typeof null); //출력결과 : object
 console.log(typeof undefined); //출력결과 : undefined
 ```
+
+#### object형
+
+- Array
+
+js에서의 object와 ts에서의 object은 조금 다른 의미를 갖는다.
+
+Primitive Types가 아닌 것을 나타내고 싶을 때 사용하는 타입이다.
+
+##### array
+
+```ts
+// 타입 지정방법 두가지
+let list: number[] = [1, 2, 3];
+let list2: Array<number> = [1, 2, 3];
+```
+
+위의 방식을 더 권장하고 있다. jsx나 tsx에서의 충돌사례가 있다고.
+
+```ts
+// 배열 요소가 숫자와 문자 모두 가능할 때
+// 괄호로 묶어야 함
+let list: (number | string)[] = [1, 2, "3"];
+```
