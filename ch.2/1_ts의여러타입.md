@@ -82,4 +82,24 @@ let templateString: string = `my name is ${myName} and age id ${age}`;
 
 ##### symbol
 
+자료형 Symbol은 new Symbol의 형태로 새로운 객체를 생성하지 않고 Symbol()함수로 생성한다.
+
+고유하고 수정불가능한 값으로 만들어주기 때문에 주로 접근을 제어하는데 쓰는 경우가 많다.
+
+```ts
+console.log(Symbol("test") === Symbol("test"));
+// 출력 결과 : false
+
+const sym = Symbol();
+
+const obj = {
+  [sym]: "data",
+};
+console.log(obj[sym]);
+
+// obj의 sym에 접근하기 위해서는
+// sym으로만 접근가능하다.
+// 따라서 Symbol은 위처럼 접근을 제어할 때 주로 사용된다.
+```
+
 ##### null & undefined
