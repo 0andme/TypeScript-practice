@@ -107,13 +107,18 @@ console.log(obj[sym]);
 만약 따로 ts옵션을 지정하지 않는다면 다른 타입에 null이나 undefined를 할당할 수 있다는 의미가 된다. 만약 --strictNullChecks 옵션을 사용하면 null과 undefined는 각자 자신과 맞는 타입이나 void에만 할당할 수 있다.
 
 ```ts
-// strict mode일 때 error
+// strict mode일때 error
 let str: string = undefined;
 // void에는 undefined만 가능
-let str22: void = undefined;
+let voidVal: void = undefined;
 // void에는 null은 불가
-let str33: void = null;
+voidVal = null;
 // 아래는 error가 나지 않는 경우
 let nullVal: null = null;
 let undefinedVal: undefined = undefined;
+//  strict mode에서 error가 안 나게 하려면
+let strVal: string | undefined = undefined;
+//런타임에서 null의 타입은 object이다.
+console.log(typeof null); //출력결과 : object
+console.log(typeof undefined); //출력결과 : undefined
 ```
