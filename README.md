@@ -25,4 +25,5 @@
 
 [ 타입스크립트에 추가된 타입](ch.2/ts에-추가된-타입.md)
 
--[tuple](ch.2/ts에-추가된-타입.md#tuple) -[any](ch.2/ts에-추가된-타입.md#any)
+- [tuple](ch.2/ts에-추가된-타입.md#tuple)
+- [any](ch.2/ts에-추가된-타입.md#any)
