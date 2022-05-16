@@ -113,4 +113,29 @@ if (typeof aVal != "string") {
 
 ##### Void
 
-##### Enum
+void로 지정한다는 의미는 그 리턴된 값으로 아무것도 하지 않겠다고 명시하려는 용도.
+
+함수의 리턴값을 void로 추론하는 경우는
+
+1. return 문이 아예 없을 경우
+2. return ; 만 작성한 경우
+
+리턴타입을 void로 지정한 후 returun undefined를 하는 경우 타입에러 없음
+
+```ts
+// void로 추론되는 경우
+// 1. return을 안 하는 경우
+function returnVoid(msg: string) {
+  console.log(msg);
+}
+
+// 2. return 값이 없을 때 경우
+function returnVoid2(msg: string): void {
+  console.log(msg);
+  return;
+}
+
+// returnVal와 returnVal2의 타입은 void
+const returnVal = returnVoid("msg");
+const returnVal2 = returnVoid2("msg");
+```
