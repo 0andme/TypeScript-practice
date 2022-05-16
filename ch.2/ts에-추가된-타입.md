@@ -87,6 +87,30 @@ if (typeof maybe === "string") {
 
 ##### Never
 
+주로 리턴에 사용된다. 아무것도 리턴되지 않는 다는 의미.
+
+never은 모든 타입의 서브타입이므로 모든 타입에 할당할 수 있다. 그러나 반대로, never에는 어떤 것도 할당할 수 없다. any조차도 never에 할당 할 수 없다.
+
+```ts
+// 아무것도 리턴되지 않는 경우에만 never를 쓸수 있다.
+function error(msg: string): never {
+  throw new Error(msg);
+}
+
+//fail 함수의 리턴 타입이 never라고 추론된다.
+function fail() {
+  return error("failed");
+}
+
+// 타입 실수를 막을 때 사용한다.
+// if 문 안에서 aVal의 타입이 never로 할당된다.
+let aVal: string = "hello";
+
+if (typeof aVal != "string") {
+  aVal;
+}
+```
+
 ##### Void
 
 ##### Enum
