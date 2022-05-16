@@ -28,8 +28,6 @@ const [data1, data2, data3] = data;
 
 any는 어떤 타입이어도 상관없는 타입이라는 의미이므로 최대한 안 쓰는게 핵심이다. ts 옵션 중에 `noImplicitAny`옵션을 true로 설정하면 any를 작성하지 않으면 오류표시가 난다.
 
-any 타입은 계속해서 전파된다. 예를 들어 배열 데이터의 타입이 any이면 그 배열의 각 요소도 any타입을 갖는다. 객체 데이터가 any타입이면 객체. 으로 접근한 데이터도 any 타입을 갖는다.
-
 ```ts
 const msg = returnAny("리턴");
 
@@ -49,6 +47,17 @@ function returnAny(msg): any {
 function returnAny2(msg: any): any {
   console.log(msg);
 }
+```
+
+any 타입은 계속해서 전파된다. 예를 들어 배열 데이터의 타입이 any이면 그 배열의 각 요소도 any타입을 갖는다. 객체 데이터가 any타입이면 객체. 으로 접근한 데이터도 any 타입을 갖는다.
+
+```ts
+const arr: any = [1, 2, 3];
+const [a, b, c] = arr;
+// a b c에 커서를 올리면 type이 any라고 뜬다.
+const obj: any = {};
+const test = obj.a;
+// test의 타입도 any
 ```
 
 ##### Unknown
