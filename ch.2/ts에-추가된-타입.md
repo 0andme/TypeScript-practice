@@ -62,6 +62,29 @@ const test = obj.a;
 
 ##### Unknown
 
+any가 가지는 불안정한 타입을 커버하기 위한 타입. 모르는 변수의 타입을 묘사해야하는 경우도 있다. 모든 값을 의도적으로 받아야할 때 쓰는 타입
+
+any보다 늦게나온 타입이다. any타입보다는 type-safe한 타입. 컴파일러가 타입을 추론할 수 있게 해주거나 타입을 확정해주지 않으면 다른 곳에 할당할 수 없다. 그러나 데이터의 유형을 검사해야하는 경우엔 유용하다.
+
+```ts
+declare const maybe: unknown;
+
+//error:  unknown타입의 값을 number타입의 변수에넣을수 없음
+// const aNum: number = maybe;
+
+// 아래코드는 런타임일 때 타입가드가 된다.
+if (maybe === true) {
+  // if문을 만나면서
+  // 타입가드가 되면서 maybe의 타입이 ture가 됨
+  const aBool: boolean = maybe;
+}
+
+if (typeof maybe === "string") {
+  // 타입가드가 되면서 maybe의 타입이 string이 됨
+  const string: string = maybe;
+}
+```
+
 ##### Never
 
 ##### Void
