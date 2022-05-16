@@ -15,3 +15,9 @@ function returnAny(msg) {
 function returnAny2(msg) {
     console.log(msg);
 }
+const arr = [1, 2, 3];
+const [a, b, c] = arr;
+// a b c에 커서를 올리면 type이 any라고 뜬다.
+const obj2 = {};
+const test = obj2.a;
+// test의 타입도 any
