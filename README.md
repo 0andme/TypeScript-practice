@@ -27,3 +27,6 @@
 
 - [tuple](ch.2/ts에-추가된-타입.md#tuple)
 - [any](ch.2/ts에-추가된-타입.md#any)
+- [unknown](ch.2/ts에-추가된-타입.md#unknown)
+- [never](ch.2/ts에-추가된-타입.md#never)
+- [void](ch.2/ts에-추가된-타입.md#void)
